@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🔐 Gerador de senha</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        margin-top: 5%;
+        background: #292C3B;
+        justify-content: center;
+        align-content: center;
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    img{
+        margin: 5%;
+    }
+    h2{
+        color: #FF9311;
+    }
+    button{
+        width: 20rem;
+        height: 4rem;
+        margin: 5%;
+        border-radius: 10px;
+        border: 1px solid #6862FB;
+        background: #6862FB;
+        font-size: 30px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    button:hover{
+        border: 1px solid #FFFFFF;
+        background: #292C3B;
+    }
+
+
+</style>
+<body>
+    <img src="https://icon-icons.com/icons2/644/PNG/128/yellow_key_icon-icons.com_59573.png" alt="Chave">
+    <h1>GERE UMA SENHA</h1>
+    <button onclick="genarate()"> &#128273; Gerar Senha</button>
+    <div id="pass" class="pass">
+
+    </div>
+    <script>
+        var x = "0123456789!@#$%¨&*()_-+=§[];:.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        function genarate(){
+            var password='';
+            for(let index = 1; index <= 10; index++){
+                var c = Math.floor((Math.random()*x.length)+0)
+                password += x.charAt(c);
+            }
+            console.log(password);
+            document.getElementById('pass').innerHTML = `<h2> Sua senha:  ${password}</h2>`;
+        }
+    </script>
+</body>
+</html>
