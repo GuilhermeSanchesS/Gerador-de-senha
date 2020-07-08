@@ -43,7 +43,31 @@
         border: 1px solid #FFFFFF;
         background: #292C3B;
     }
+    
+    footer {
+        background-color: #222;
+        color: #fff;
+        font-size: 14px;
+        bottom: 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 999;
+    }
 
+    footer p {
+        margin: 10px 0;
+    }
+
+    footer i {
+        color: red;
+    }
+
+    footer a {
+        color: #3c97bf;
+        text-decoration: none;
+    }
 
 </style>
 <body>
@@ -53,7 +77,16 @@
     <div id="pass" class="pass">
 
     </div>
+    <footer>
+        <p>
+            Criado com <i class="fa fa-heart"></i> por
+            <a target="_blank" href="https://github.com/GuilhermeSanchesS">Guilherme Sanches</a>
+            - Gostou vega agora outros dos nossos produtos 
+            <a target="_blank" href="https://www.buildrweb.grupoanjoguardiao.com/">aqui</a>.
+        </p>
+    </footer>
     <script>
+        /*https://www.youtube.com/watch?v=dB3p1sHWPNY&t=42s*/
         var x = "0123456789!@#$%¨&*()_-+=§[];:.?/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
         function genarate(){
             var password='';
